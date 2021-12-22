@@ -1,0 +1,17 @@
+{
+  "name": "cron_golf",
+  "version": "1.0.0",
+  "description": "'cron scheduler for golf'",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "main": "index.js",
+  "repository": "git@github.com:/jaehyunlee25/cron_golf",
+  "author": "jaehyunlee <jaehyunlee25@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "node-cron": "^3.0.0"
+  },
+  "type": "module"
+}
