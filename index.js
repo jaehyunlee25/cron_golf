@@ -5,9 +5,9 @@ const log = console.log;
 
 
 const every5seconds = '*/5 * * * * *';
-/* cron.schedule(every5seconds, function () {
+cron.schedule(every5seconds, function () {
   log('매 5초 마다 작업 실행 :', new Date().toString());
-}); */
+});
 
 cron.schedule('0 0 3 * * *', function () {
   log('매일 새벽 3시 마다 작업 실행 :', new Date().toString());
