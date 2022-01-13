@@ -9,6 +9,7 @@ cron.schedule(every5seconds, function () {
   const now = new Date();
   now.setHours(now.getHours() +9);  //set 'Asia/Seoul'
   log('매 5초 마다 작업 실행 :', now.toString());
+  deletePastStatus();
 });
 
 cron.schedule('0 0 * * * *', function () {
@@ -21,7 +22,7 @@ cron.schedule('0 0 * * * *', function () {
 function deletePastStatus() {
   axios({
     method: 'post',
-    url: 'http://golf.mnemosyne.co.kr:1006/api/reservation/delPast',
+    url: 'http://dev.mnemosyne.co.kr:1006/api/reservation/delPast',
     data: {}
   }).then((resp) => {
     log(resp.data);
