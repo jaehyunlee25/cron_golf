@@ -9,7 +9,6 @@ cron.schedule(every5seconds, function () {
   const now = new Date();
   now.setHours(now.getHours() +9);  //set 'Asia/Seoul'
   log('매 5초 마다 작업 실행 :', now.toString());
-  deletePastStatus();
 });
 
 cron.schedule('0 0 * * * *', function () {
